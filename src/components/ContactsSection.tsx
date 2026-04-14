@@ -57,8 +57,11 @@ export default function ContactsSection({ addRef }: ContactsSectionProps) {
           <div ref={addRef} className="reveal text-center mb-12">
             <span className="text-pink-400 font-semibold text-sm uppercase tracking-widest">О разработчике</span>
             <h2 className="font-montserrat font-black text-4xl md:text-5xl mt-3">
-              Кто создал <span className="gradient-text-warm">VideoCraft</span>
+              Хочешь помочь или <span className="gradient-text-warm">оставить отзыв?</span>
             </h2>
+            <p className="text-white/50 max-w-lg mx-auto mt-4 text-lg">
+              Обращайся ко мне напрямую — отвечу на любые вопросы, выслушаю предложения и пожелания
+            </p>
           </div>
 
           <div ref={addRef} className="reveal glass rounded-3xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center">
@@ -69,38 +72,40 @@ export default function ContactsSection({ addRef }: ContactsSectionProps) {
             </div>
             <div>
               <h3 className="font-montserrat font-black text-2xl mb-1">Алексей Новиков</h3>
-              <p className="text-purple-400 font-semibold mb-4">Founder & Lead Developer</p>
+              <p className="text-purple-400 font-semibold mb-4">Разработчик VideoCraft</p>
               <p className="text-white/60 leading-relaxed mb-6">
-                Разработчик с 10-летним опытом в области обработки видео и компьютерного зрения.
-                VideoCraft создана из личной потребности — профессионального инструмента без лишних затрат.
-                Сегодня программой пользуются более 50 000 человек по всему миру.
+                Если у тебя есть идея для новой функции, ты нашёл баг или просто хочешь сказать спасибо —
+                пиши, буду рад каждому сообщению. Ваша обратная связь делает программу лучше.
               </p>
-              <div className="flex gap-4">
-                {[
-                  { icon: "Github", label: "GitHub" },
-                  { icon: "Linkedin", label: "LinkedIn" },
-                  { icon: "Twitter", label: "Twitter" },
-                ].map((social, i) => (
-                  <button key={i} className="glass px-4 py-2 rounded-xl flex items-center gap-2 text-sm text-white/60 hover:text-white border border-white/10 transition-all hover:border-purple-500/40">
-                    <Icon name={social.icon} size={16} fallback="Circle" />
-                    {social.label}
-                  </button>
-                ))}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="mailto:alexnovikov@gmail.com"
+                  className="shimmer-btn text-white font-montserrat font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 text-sm hover:scale-105 transition-transform justify-center"
+                >
+                  <Icon name="Mail" size={16} />
+                  alexnovikov@gmail.com
+                </a>
+                <a
+                  href="https://t.me/Bodya_soul"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass px-5 py-2.5 rounded-xl flex items-center gap-2 text-sm text-white/70 hover:text-white border border-white/10 transition-all hover:border-purple-500/40 justify-center"
+                >
+                  <Icon name="MessageCircle" size={16} className="text-cyan-400" />
+                  @Bodya_soul
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 mt-6">
-            {[
-              { val: "2014", label: "Год основания" },
-              { val: "50K+", label: "Пользователей" },
-              { val: "4.9★", label: "Средний рейтинг" },
-            ].map((stat, i) => (
-              <div key={i} ref={addRef} className="reveal glass rounded-2xl p-6 text-center glass-hover" style={{transitionDelay: `${i * 0.1}s`}}>
-                <div className="font-montserrat font-black text-2xl gradient-text">{stat.val}</div>
-                <div className="text-white/40 text-sm mt-1">{stat.label}</div>
-              </div>
-            ))}
+          <div ref={addRef} className="reveal mt-8 glass rounded-2xl p-6 border border-pink-500/20 text-center">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <Icon name="Heart" size={20} className="text-pink-400" />
+              <span className="font-montserrat font-bold text-lg">Любой вклад важен</span>
+            </div>
+            <p className="text-white/50 text-sm max-w-md mx-auto">
+              Тестирование, переводы, дизайн, идеи — всё приветствуется. Напиши, чем хочешь помочь, и мы разберёмся вместе.
+            </p>
           </div>
         </div>
       </section>
