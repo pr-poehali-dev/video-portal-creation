@@ -111,19 +111,96 @@ export default function ContactsSection({ addRef }: ContactsSectionProps) {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-white/5 py-8">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded shimmer-btn flex items-center justify-center">
-              <Icon name="Play" size={12} className="text-white" />
+      <footer className="border-t border-white/5 pt-16 pb-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-t from-purple-950/20 to-transparent pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 relative">
+
+          {/* Top */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+            {/* Brand */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-8 h-8 rounded-lg shimmer-btn flex items-center justify-center">
+                  <Icon name="Play" size={16} className="text-white" />
+                </div>
+                <span className="font-montserrat font-black text-lg gradient-text">VideoCraft</span>
+              </div>
+              <p className="text-white/40 text-sm leading-relaxed mb-5">
+                Профессиональный видеоредактор для всех. Без подписок, без ограничений.
+              </p>
+              <div className="flex gap-3">
+                {[
+                  { icon: "Mail", href: "mailto:alexnovikov@gmail.com" },
+                  { icon: "MessageCircle", href: "https://t.me/Bodya_soul" },
+                ].map((s, i) => (
+                  <a
+                    key={i}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 glass rounded-xl flex items-center justify-center text-white/40 hover:text-cyan-400 border border-white/5 hover:border-cyan-400/30 transition-all"
+                  >
+                    <Icon name={s.icon} size={16} fallback="Circle" />
+                  </a>
+                ))}
+              </div>
             </div>
-            <span className="font-montserrat font-bold gradient-text">VideoCraft</span>
+
+            {/* Nav */}
+            <div>
+              <h4 className="font-montserrat font-bold text-sm uppercase tracking-widest text-white/30 mb-4">Навигация</h4>
+              <ul className="space-y-3">
+                {[
+                  { id: "about", label: "О программе" },
+                  { id: "how", label: "Инструкция" },
+                  { id: "gallery", label: "Скриншоты" },
+                  { id: "contacts", label: "Скачать" },
+                  { id: "developer", label: "Контакты" },
+                ].map(item => (
+                  <li key={item.id}>
+                    <button
+                      onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" })}
+                      className="text-white/40 hover:text-white text-sm transition-colors"
+                    >
+                      {item.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Download */}
+            <div>
+              <h4 className="font-montserrat font-bold text-sm uppercase tracking-widest text-white/30 mb-4">Скачать</h4>
+              <div className="space-y-3">
+                <button className="w-full glass border border-white/10 hover:border-purple-500/40 rounded-xl px-4 py-3 flex items-center gap-3 text-sm text-white/60 hover:text-white transition-all">
+                  <Icon name="Monitor" size={18} className="text-purple-400" />
+                  <div className="text-left">
+                    <div className="font-semibold text-white/80">Windows</div>
+                    <div className="text-xs text-white/30">Windows 10 / 11</div>
+                  </div>
+                </button>
+                <button className="w-full glass border border-white/10 hover:border-blue-500/40 rounded-xl px-4 py-3 flex items-center gap-3 text-sm text-white/60 hover:text-white transition-all">
+                  <Icon name="Apple" size={18} className="text-blue-400" />
+                  <div className="text-left">
+                    <div className="font-semibold text-white/80">macOS</div>
+                    <div className="text-xs text-white/30">macOS 12+</div>
+                  </div>
+                </button>
+              </div>
+            </div>
           </div>
-          <p className="text-white/30 text-sm">© 2024 VideoCraft. Все права защищены.</p>
-          <div className="flex gap-4 text-white/40 text-sm">
-            <button className="hover:text-white transition-colors">Конфиденциальность</button>
-            <button className="hover:text-white transition-colors">Лицензия</button>
+
+          {/* Bottom */}
+          <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+            <p className="text-white/20 text-sm">© 2024 VideoCraft. Все права защищены.</p>
+            <div className="flex gap-6 text-white/25 text-sm">
+              <button className="hover:text-white/60 transition-colors">Конфиденциальность</button>
+              <button className="hover:text-white/60 transition-colors">Лицензия</button>
+            </div>
           </div>
+
         </div>
       </footer>
     </>
