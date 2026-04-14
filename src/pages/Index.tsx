@@ -98,7 +98,7 @@ export default function Index() {
             <div className="w-8 h-8 rounded-lg shimmer-btn flex items-center justify-center">
               <Icon name="Play" size={16} className="text-white" />
             </div>
-            <span className="font-montserrat text-lg gradient-text font-black">VidarPro</span>
+            <span className="font-montserrat text-lg gradient-text font-black">VideoCraft</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -216,7 +216,7 @@ export default function Index() {
             <h2 className="font-montserrat font-black text-4xl md:text-5xl mt-3 mb-4">
               Всё что нужно для <span className="gradient-text">создания видео</span>
             </h2>
-            <p className="text-white/50 max-w-xl mx-auto">VidarPro объединяет профессиональные инструменты в интуитивно понятном интерфейсе</p>
+            <p className="text-white/50 max-w-xl mx-auto">VideoCraft объединяет профессиональные инструменты в интуитивно понятном интерфейсе</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -361,7 +361,7 @@ export default function Index() {
                 Скачай <span className="gradient-text">бесплатно</span>
               </h2>
               <p className="text-white/60 max-w-md mx-auto mb-10 text-lg">
-                Попробуй VidarPro прямо сейчас. Без подписки, без ограничений по времени.
+                Попробуй VideoCraft прямо сейчас. Без подписки, без ограничений по времени.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -375,11 +375,10 @@ export default function Index() {
                 </button>
               </div>
 
-              <div className="border-t border-white/10 pt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="border-t border-white/10 pt-8 grid grid-cols-1 md:grid-cols-2 gap-6 text-center max-w-sm mx-auto w-full">
                 {[
-                  { icon: "Mail", label: "Email", value: "support@vidarpro.ru" },
-                  { icon: "MessageCircle", label: "Telegram", value: "@vidarpro" },
-                  { icon: "Globe", label: "Сайт", value: "vidarpro.ru" },
+                  { icon: "Mail", label: "Email", value: "alexnovikov@gmail.com" },
+                  { icon: "MessageCircle", label: "Telegram", value: "@Bodya_soul" },
                 ].map((contact, i) => (
                   <div key={i} className="flex flex-col items-center gap-2">
                     <div className="w-10 h-10 rounded-xl glass flex items-center justify-center">
@@ -401,7 +400,7 @@ export default function Index() {
           <div ref={addRef} className="reveal text-center mb-12">
             <span className="text-pink-400 font-semibold text-sm uppercase tracking-widest">О разработчике</span>
             <h2 className="font-montserrat font-black text-4xl md:text-5xl mt-3">
-              Кто создал <span className="gradient-text-warm">VidarPro</span>
+              Кто создал <span className="gradient-text-warm">VideoCraft</span>
             </h2>
           </div>
 
@@ -412,11 +411,11 @@ export default function Index() {
               </div>
             </div>
             <div>
-              <h3 className="font-montserrat font-black text-2xl mb-1">Алексей Ковалёв</h3>
+              <h3 className="font-montserrat font-black text-2xl mb-1">Алексей Новиков</h3>
               <p className="text-purple-400 font-semibold mb-4">Founder & Lead Developer</p>
               <p className="text-white/60 leading-relaxed mb-6">
                 Разработчик с 10-летним опытом в области обработки видео и компьютерного зрения.
-                VidarPro создана из личной потребности — профессионального инструмента без лишних затрат.
+                VideoCraft создана из личной потребности — профессионального инструмента без лишних затрат.
                 Сегодня программой пользуются более 50 000 человек по всему миру.
               </p>
               <div className="flex gap-4">
@@ -456,9 +455,9 @@ export default function Index() {
             <div className="w-6 h-6 rounded shimmer-btn flex items-center justify-center">
               <Icon name="Play" size={12} className="text-white" />
             </div>
-            <span className="font-montserrat font-bold gradient-text">VidarPro</span>
+            <span className="font-montserrat font-bold gradient-text">VideoCraft</span>
           </div>
-          <p className="text-white/30 text-sm">© 2024 VidarPro. Все права защищены.</p>
+          <p className="text-white/30 text-sm">© 2024 VideoCraft. Все права защищены.</p>
           <div className="flex gap-4 text-white/40 text-sm">
             <button className="hover:text-white transition-colors">Конфиденциальность</button>
             <button className="hover:text-white transition-colors">Лицензия</button>
